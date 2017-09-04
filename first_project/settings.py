@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'first_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysql',  # 適当です
+        'USER': 'root',  # 適当です
+        'PASSWORD': '',  # 適当です
+        'HOST': '',  # 適当です (ローカルホストなら空でも可)
+        'PORT': '',  # 適当です (デフォルトポートなら空でも可)
     }
 }
 
@@ -99,6 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
+
+
+
 
 
 # Internationalization
